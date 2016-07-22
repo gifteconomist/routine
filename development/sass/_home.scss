@@ -1,0 +1,297 @@
+$red: #ff1b00;
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.brand-title {
+  z-index: 5;
+  position: fixed;
+  top: 8px;
+  left: 50px;
+  color: $black;
+  text-align: center;
+  font-family: ceremony;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: $red;
+  
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+}
+
+.brand-image {
+  z-index: 5;
+  position: fixed;
+  top: 12px;
+  right: 50px;
+  cursor: pointer;
+  
+  img {
+    width: 50px; 
+  }
+}
+
+.stage {
+//  padding: 70px 50px 50px 50px;
+  min-height: calc(300vh - 300px);
+  width: calc(100vw - 96px);
+  margin: 70px 50px 50px;
+//  border-right: 2px solid red;
+//  border-left: 2px solid red;
+  
+  &::before {
+        content:'';
+        display: block;
+        background: white;
+        width: calc(100% - 96px);
+        height: 68px;
+        border-bottom: 2px solid $red;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 4;
+        margin-left: 50px;
+      }
+  
+  &::after {
+        content:'';
+        display: block;
+        background: white;
+        width: calc(100% - 96px);
+        height: 48px;
+        border-top: 2px solid $red;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 4;
+        margin-left: 50px;
+      }
+  
+  a {
+    width: inherit;
+    height: inherit;
+    z-index: 2;
+    display: block;
+    position: absolute;
+  }
+  
+  &__item {
+    
+    & {
+      padding: 15px 0;
+    }
+    
+    img {
+      width: calc(33.33% - 7px);
+      padding: 0 5px;
+      
+      &:first-child {
+        padding-left: 0;
+      }
+      
+      &:last-child {
+        padding-right: 0;
+      }
+      
+    }
+    
+    h6, h5, h1, h2, p {
+      margin: 0;
+      color: $black;
+      font-family: tiempos-reg;
+      left: 5px;
+    }
+    
+    h6 {
+      text-align: right;
+      font-family: labmono;
+      font-size: 12px;
+      text-transform: uppercase;
+      padding-bottom: 5px;
+      
+      span {
+        position: relative;
+        font-style: none;
+        border-bottom: 1px solid $red;
+//        &:before {
+//          content: '';
+//          display: inline-block;
+//          width: 12px;
+//          height: 1px;
+//          position: absolute;
+//          right: 0px;
+//          top: -5px;
+//          background: $red;
+//        }
+//
+//        &:after {
+//          content: '';
+//          display: inline-block;
+//          width: 1px;
+//          height: 10px;
+//          top: -5px;
+//          right: 0px;
+//          position: absolute;
+//          background: $red;
+//        }
+      }
+    }
+    
+    h5 {
+      font-family: labmono;
+      color: #666;
+      font-size: 10px;
+      
+      span {
+        position: relative;
+        font-style: normal;
+        border-bottom: 1px solid $red;
+        
+//        &:before {
+//          content: '';
+//          display: inline-block;
+//          width: 1px;
+//          height: 10px;
+//          position: absolute;
+//          left: 0px;
+//          bottom: -5px;
+//          background: $red;
+//        }
+//
+//        &:after {
+//          content: '';
+//          display: inline-block;
+//          width: 12px;
+//          height: 1px;
+//          bottom: -5px;
+//          left: 0px;
+//          position: absolute;
+//          background: $red;
+//        }
+      }
+    }
+    
+    h1 {
+      font-weight: 100;
+      font-size:21px;
+    }
+    span {
+      white-space: pre;
+      font-weight: 100;
+      font-style: italic;
+    }
+    p {
+      padding: 1px 0 5px 8px;
+      font-size: 14px;
+    }
+  }
+  
+  &__item__title {
+    
+    & {
+      display: inline-block;
+      position: absolute;
+      width: auto;
+      height: auto;
+      background: $white;
+      padding: 15px;
+      right: 20px;
+      bottom: 50px;
+    }
+    
+    h6, h1, h2, p {
+      margin: 0;
+      color: $white;
+      mix-blend-mode: difference;
+      font-family: Georgia;
+    }
+    
+    h6 {
+      text-align: right;
+      font-family: labmono;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    h1 {
+      font-weight: 100;
+      font-size:24px;
+    }
+    h2 {
+      white-space: pre;
+      font-weight: 100;
+      font-style: italic;
+      font-size: 18px;
+    }
+    p {
+      padding: 10px 0 0 0;
+    }
+  }
+
+  &__item--1 {
+    margin: 10px 0;
+    display: inline-block;
+    position: relative;
+    width: calc(50vw - 130px;
+    height: calc(50vh - 130px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../images/rainer-conceptofdust.jpg);
+  }
+
+  &__item--2 {
+    @extend .stage__item--1;
+    background-image: url(../images/brooks-wilderness.png);
+  }
+
+  &__item--about {
+    @extend .stage__item--1;
+    background: rgba(255,0,0,0.5);
+    position: relative;
+    
+    .about {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      width: 50vw;
+      margin: 0 auto;
+      vertical-align: middle;
+      
+      .mission {
+       
+      }
+
+      p {
+        margin: 0 0 15px 0;
+        font-family:Georgia;
+        font-size: 20px;
+        letter-spacing: 0.05em;
+        line-height: 1.3em;
+        color: $white;
+        mix-blend-mode: difference;
+        
+        a {
+          width: auto;
+          height: auto;
+          display: inline;
+          position: static;
+          cursor: pointer;
+        }
+      }
+    }
+    
+    img {
+      position: absolute;
+      bottom: -5px;
+      right: 110px;
+      width: 350px;
+    }
+  }
+}
+

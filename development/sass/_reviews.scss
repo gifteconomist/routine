@@ -1,0 +1,164 @@
+.body-review {
+  
+//  .stage-wrapper {
+//    border: #f0f0f0 solid 50px;
+//    border-top: #f0f0f0 solid 70px;
+//    border-bottom: 0;
+//  }
+  
+  .brand-title {
+    color: $red;
+    position: fixed;
+    
+    a {
+      text-decoration: none;
+      color: $red;
+    }
+  }
+  
+  .stage {
+    margin: 70px 50px 0 50px;
+    background: white;
+    display: inline-block;
+    font-family: tiempos-reg;
+//    border-right: 2px solid red;
+//    border-left: 2px solid red;
+    
+    &::before {
+        content:'';
+        background: white;
+        border-bottom: 2px solid red;
+        width: calc(100% - 96px);
+        height: 68px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        margin-left: 50px;
+       
+      }
+  
+  &::after {
+        width: calc(100% + 4px);
+        content:'';
+        position: relative;
+        background: white;
+        border-top: 2px solid red;
+        margin: -2px;
+        height: 48px;
+      }
+
+    
+    &__text {
+      
+      & {
+        width: 60vw;
+        padding: 20px 0 0 80px;
+        font-weight: 100;
+        color: #3c3c3c;
+        font-size: 18px;
+        line-height: 1.618em; 
+        
+        span {
+          font-family: tiempos-italic;
+        }
+        
+        .quote {
+          padding: 15px;
+          font-family: labmono;
+          font-size: 20px;
+//          color: #8aacb8;
+          color: $red;
+          font-weight: bold;
+//          letter-spacing: -0.02em;
+          line-height: 1.6em;
+        }
+        
+        sup {
+          line-height: 1;
+        }
+      }
+      
+      &__title {
+        padding: 20px 0;
+
+        h1 {
+          margin: 0;
+          padding: 0 0 7px 0;
+          font-size: 48px;
+          font-weight: 100 !important;
+          line-height: 1;
+        }
+
+        p {
+          margin: 0;
+          font-size: 24px;
+
+          span {
+            font-family: tiempos-italic;
+          }
+        }
+        
+        .author {
+          font-family: labmono, sans-serif;
+          font-size: 13px; 
+          color: #666;
+          line-height: 1.2em;
+          padding: 20px 0 10px 0;
+          
+          span {
+            text-transform: uppercase;
+            font-style: normal;
+            font-family: tiempos-reg;
+          }
+        }
+      }
+      
+      &__image {
+        width: 90%;
+        margin: 20px;
+        
+        img {
+          width: 100%;
+          height: auto;
+          display: inline-block;
+        }
+        
+        p {
+          font-family: Verdana, Arial;
+          font-size: 10px;
+          color: #111;
+          margin: 0;
+          line-height: 1.5em;
+          text-align: right;
+        }
+        
+        &--main {
+          margin: 20px 0;
+          
+          img {
+            width: 100%;
+          }
+          
+          p {
+            font-family: Verdana, Arial;
+            font-size: 10px;
+            color: #111;
+            margin: 0;
+            line-height: 1.2em;
+            text-align: right;
+          }
+        }
+        
+        iframe {
+          display: block;
+          width: 100%;
+          min-height: 300px;
+          height: 100%;
+          
+        }
+      }
+    
+    }
+  }
+}

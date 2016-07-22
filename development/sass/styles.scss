@@ -1,0 +1,47 @@
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+//fonts
+@font-face {
+  font-family: ceremony;
+  src: url('../fonts/ceremony_black_a.eot'),
+       url('../fonts/ceremony_black_a.ttf'),
+       url('../fonts/ceremony_black_a.woff'),
+       url('../fonts/ceremony_black_a.woff2'),
+       url('../fonts/ceremony_black_a.svg');
+}
+
+@font-face {
+  font-family: labmono;
+  src: url(../fonts/LabMono-Regular.otf);
+}
+
+@font-face {
+  font-family: pig;
+  src: url(../fonts/Pigeon.otf);
+}
+
+@font-face {
+  font-family: tiempos-reg;
+  src: url('../fonts/TiemposTextWeb-Regular.woff'),
+       url('../fonts/TiemposTextWeb-Regular.woff2'),
+       url('../fonts/TiemposTextWeb-Regular.eot');
+}
+
+@font-face {
+  font-family: tiempos-italic;
+  src: url('../fonts/TiemposTextWeb-RegularItalic.woff'),
+       url('../fonts/TiemposTextWeb-RegularItalic.woff2'),
+       url('../fonts/TiemposTextWeb-RegularItalic.eot');
+}
+
+//color vars
+$white: #fff;
+$black: #111;
+$light-black: mix($black, #666);
+
+//Partials
+
+@import 'home';
+@import 'reviews';
