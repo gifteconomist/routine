@@ -6,29 +6,19 @@ html
     script(type='text/javascript', src='development/scripts/script.js')
     link(rel='stylesheet', href='assets/css/styles.css')
   body
-    .brand-title Routine
-    .brand-image
-      img(class="brand-logo" src="assets/images/chair.svg")
+    a(href="index.html" class="brand-title") Routine
+    .brand-nav
+      a(href="#about") about 
     .stage
-      .stage__item
-        .row
-          h6 #[span review]
-        .row
-          img(src='assets/images/rainer-conceptofdust.jpg')
-          img(src='assets/images/rainer-conceptofdust-6.jpg')
-          img(src='assets/images/rainer-conceptofdust-8.jpg')
-        h1 Dust Over Everything: Yvonne Rainer's #[span The Concept of Dust]
-        p In the face of death, Yvonne continues to peform
-        h5 #[span June 18th | By Maria Chounard]
-      .stage__item
-        h6 review
-        .row
-          img(src='assets/images/rainer-conceptofdust.jpg')
-          img(src='assets/images/rainer-conceptofdust-6.jpg')
-          img(src='assets/images/rainer-conceptofdust-8.jpg')
-        h1 Dust Over Everything: Yvonne Rainer's #[span The Concept of Dust]
-        p In the face of death, Yvonne continues to peform
-        
-        
-      
+      block stageItems
+    .footer
+      .row
+        .column
+          p Routine Magazine is an online space for writing on dance and performance. Routine's primary initiative is to promote documentation and criticism that supports the creation, practice and education of dance. 
+          p Inquire to submit. 
+          p Contact at #[span hello@routinemagazine.com]
+        a(name="about" class="brand-footer") R
+      .row
+        p 2016 &#169; Routine Magazine
+          
            

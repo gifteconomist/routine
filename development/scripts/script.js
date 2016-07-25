@@ -1,12 +1,20 @@
 $(document).ready(function() {
+  var titlePosY = $('.stage__text__title').offset().top;  
   
-  $(document).on('mouseover', '.brand-logo', function() {
-    var src = $(this).attr("src").match(/[^\.]+/) + "-front.svg";
-    $(this).attr("src", src);
-  })
+  $(window).scroll(function() {
+    var outine = $('.outine');
+    var articleTitle = $('.brand-nav')
+    if ($(window).scrollTop() > titlePosY){
+      outine.addClass('outine-onscroll');
+      articleTitle.addClass('title-hide');
+      }
+    else {
+      outine.removeClass('outine-onscroll');
+      articleTitle.removeClass('title-hide');
+    }
   
-  $(document).on('mouseout', '.brand-logo', function() {
-    var src = $(this).attr("src").replace("-front.svg", ".svg");
-    $(this).attr("src", src);
-  })
-})
+  });
+});
+  
+
+

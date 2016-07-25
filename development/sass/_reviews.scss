@@ -1,11 +1,5 @@
 .body-review {
   
-//  .stage-wrapper {
-//    border: #f0f0f0 solid 50px;
-//    border-top: #f0f0f0 solid 70px;
-//    border-bottom: 0;
-//  }
-  
   .brand-title {
     color: $red;
     position: fixed;
@@ -13,6 +7,41 @@
     a {
       text-decoration: none;
       color: $red;
+    }
+    
+    .outine {
+      & {
+        display: inline-block;
+        transform: scaleX(1);
+        transition: transform .2s ease;
+        transform-origin: 0 0;
+      }
+
+      &.outine-onscroll {
+        transform: scaleX(0);
+        transition: transform .2s ease;
+        transform-origin: 0 0;
+      }
+    }
+  }
+  
+  .brand-nav {
+  
+    & {
+      opacity: 0;
+    }
+    
+    &.title-hide {
+      opacity: 1;
+      transition: opacity .2s ease;
+    }
+    
+    h1 {
+      margin: 0;
+      font-family: labmono;
+      color: $red;
+      font-size: 14px;
+      font-weight: 100;
     }
   }
   
@@ -41,11 +70,12 @@
   &::after {
         width: calc(100% + 4px);
         content:'';
-        position: relative;
-        background: white;
-        border-top: 2px solid red;
-        margin: -2px;
-        height: 48px;
+        width: 100%;
+        border-top: 2px solid $red;
+        bottom: 0;
+        left: 0;
+        z-index: 4;
+        margin: 70px 0 30px;
       }
 
     
@@ -160,5 +190,26 @@
       }
     
     }
+  }
+  
+  .footer {
+    & {
+      margin-bottom: 100px;
+    }
+    
+//    .column {
+//      margin: 0;
+//      
+//      a {
+//        font-family: labmono;
+//        font-size: 18px;
+//        margin-top: 10px;
+//        text-decoration: none;
+//        
+//        &:hover {
+//          text-decoration: underline;
+//        }
+//      }
+//   }
   }
 }

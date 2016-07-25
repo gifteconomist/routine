@@ -11,37 +11,38 @@ body {
   position: fixed;
   top: 8px;
   left: 50px;
-  color: $black;
   text-align: center;
   font-family: ceremony;
   text-transform: uppercase;
   font-size: 2.5rem;
   cursor: pointer;
   color: $red;
-  
-  a {
-    text-decoration: none;
-    color: $white;
-  }
+  text-decoration: none;
 }
 
-.brand-image {
+.brand-nav {
   z-index: 5;
   position: fixed;
-  top: 12px;
+  top: 31px;
   right: 50px;
   cursor: pointer;
   
-  img {
-    width: 50px; 
+  a {
+    font-family: labmono;
+    color: $red;
+    text-decoration: none;
+    
+    @media (max-width: $mobile-break) {
+      display: none;
+    }
   }
 }
 
 .stage {
 //  padding: 70px 50px 50px 50px;
-  min-height: calc(300vh - 300px);
+//  min-height: calc(300vh - 300px);
   width: calc(100vw - 96px);
-  margin: 70px 50px 50px;
+  margin: 70px 50px 0;
 //  border-right: 2px solid red;
 //  border-left: 2px solid red;
   
@@ -63,23 +64,13 @@ body {
         content:'';
         display: block;
         background: white;
-        width: calc(100% - 96px);
-        height: 48px;
+        width: 100%;
         border-top: 2px solid $red;
-        position: fixed;
         bottom: 0;
         left: 0;
         z-index: 4;
-        margin-left: 50px;
+        margin: 70px 0 30px;
       }
-  
-  a {
-    width: inherit;
-    height: inherit;
-    z-index: 2;
-    display: block;
-    position: absolute;
-  }
   
   &__item {
     
@@ -87,18 +78,54 @@ body {
       padding: 15px 0;
     }
     
+    .row {
+      position: relative;
+    }
+    
+    .genre {
+      position: absolute;
+      right: 0;
+    }
+    
     img {
       width: calc(33.33% - 7px);
       padding: 0 5px;
       
-      &:first-child {
+      &.first {
         padding-left: 0;
+        @media (max-width: $tablet-break) {
+          width: calc(50% - 5px);
+        }
+        @media (max-width: $mobile-break) {
+          width: 100%;
+          padding-right: none;
+        }
       }
       
-      &:last-child {
+      &.middle {
+        @media (max-width: $tablet-break) {
+          width: calc(50% - 5px);
+          padding-right: 0;
+        }
+        @media (max-width: $mobile-break) {
+          display: none;
+        }
+      }
+      
+      &.last {
         padding-right: 0;
+        
+        @media (max-width: $tablet-break) {
+          display: none;
+        }
       }
       
+    }
+    
+    a {
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
     }
     
     h6, h5, h1, h2, p {
@@ -111,81 +138,51 @@ body {
     h6 {
       text-align: right;
       font-family: labmono;
-      font-size: 12px;
+      font-size: 14px;
+      font-weight: 100;
       text-transform: uppercase;
       padding-bottom: 5px;
+      line-height: .8;
+      letter-spacing: 5px;
       
       span {
-        position: relative;
-        font-style: none;
-        border-bottom: 1px solid $red;
-//        &:before {
-//          content: '';
-//          display: inline-block;
-//          width: 12px;
-//          height: 1px;
-//          position: absolute;
-//          right: 0px;
-//          top: -5px;
-//          background: $red;
-//        }
-//
-//        &:after {
-//          content: '';
-//          display: inline-block;
-//          width: 1px;
-//          height: 10px;
-//          top: -5px;
-//          right: 0px;
-//          position: absolute;
-//          background: $red;
-//        }
+            font-family: Ceremony;
+            color: red;
+            font-size: 5px;
+            top: 0;
+            margin-left: 3px;
+            font-style: normal;
       }
     }
     
     h5 {
       font-family: labmono;
       color: #666;
-      font-size: 10px;
+      font-size: 11px;
+      font-weight: 100;
+      padding-top: 2px;
       
       span {
-        position: relative;
+        color: red;
         font-style: normal;
-        border-bottom: 1px solid $red;
-        
-//        &:before {
-//          content: '';
-//          display: inline-block;
-//          width: 1px;
-//          height: 10px;
-//          position: absolute;
-//          left: 0px;
-//          bottom: -5px;
-//          background: $red;
-//        }
-//
-//        &:after {
-//          content: '';
-//          display: inline-block;
-//          width: 12px;
-//          height: 1px;
-//          bottom: -5px;
-//          left: 0px;
-//          position: absolute;
-//          background: $red;
-//        }
       }
     }
     
     h1 {
       font-weight: 100;
       font-size:21px;
+      
+      span {
+        white-space: pre;
+        font-weight: 100;
+        font-style: italic;
+      }
+      
+      &:hover {
+        color: red !important;
+      }
     }
-    span {
-      white-space: pre;
-      font-weight: 100;
-      font-style: italic;
-    }
+    
     p {
       padding: 1px 0 5px 8px;
       font-size: 14px;
@@ -295,3 +292,67 @@ body {
   }
 }
 
+.footer {
+  
+  & {
+    margin: 0 50px 22%;
+    @media (max-width: 1250px) {
+      margin-bottom: 30%
+    } 
+    @media (max-width: 1000px) {
+      margin-bottom: 34%
+    } 
+    @media (max-width: $tablet-break) {
+      margin-bottom: 33%
+    } 
+    @media (max-width: $mobile-break) {
+      margin-bottom: 25%
+    } 
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 50px;
+    
+    .column {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      margin: 10px 0;
+      
+      p {
+        color: $black;
+        text-decoration: none;
+        font-family: labmono;
+        font-size: 18px;
+        width: 80%;
+        margin: 0 0 20px 0;
+        
+        span {
+          color: $red;
+        }
+      }
+    }
+    
+    a {
+      color: $red;
+      font-size: 2.5rem;
+      font-family: Ceremony;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    p {
+      color: $black;
+      font-family: labmono;
+      font-size: 18px;
+    }
+    
+    @media (max-width: $mobile-break) {
+      flex-direction: column;
+    } 
+  }
+  
+}

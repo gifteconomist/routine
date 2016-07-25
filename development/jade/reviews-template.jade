@@ -7,7 +7,10 @@ html
     link(rel='stylesheet', href='../assets/css/styles.css')
   body(class="body-review")
     .brand-title
-      a(href="index.html") Routine
+      a(href="../index.html") R
+      a(href="../index.html" class="outine") outine
+    .brand-nav 
+      block navTitle
     .stage
       .stage__text
         .stage__text__title
@@ -15,4 +18,12 @@ html
         .stage__text__image--main
           block stageImageMain
         block stageText
-           
+    .footer 
+      .row
+        .column
+          p Routine Magazine is an online space for writing on dance and performance. Routine's primary initiative is to promote documentation and criticism that supports the creation, practice and education of dance. 
+          p Inquire to submit. 
+          p Contact at #[span hello@routinemagazine.com]
+        a(name="about" class="brand-footer") R
+      .row
+        p 2016 &#169; Routine Magazine

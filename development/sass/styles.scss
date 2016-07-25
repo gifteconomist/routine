@@ -41,6 +41,10 @@ $white: #fff;
 $black: #111;
 $light-black: mix($black, #666);
 
+//layout vars
+$mobile-break: 650px;
+$tablet-break: 800px;
+
 //Partials
 
 @import 'home';
