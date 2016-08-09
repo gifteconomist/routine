@@ -1,0 +1,221 @@
+.body-review {
+  
+  .brand-title {
+    color: $red;
+    position: fixed;
+    
+    a {
+      text-decoration: none;
+      color: $red;
+    }
+    
+    .outine {
+      & {
+        display: inline-block;
+        transform: scaleX(1);
+        transition: transform .2s ease;
+        transform-origin: 0 0;
+      }
+
+      &.outine-onscroll {
+        transform: scaleX(0);
+        transition: transform .2s ease;
+        transform-origin: 0 0;
+      }
+    }
+  }
+  
+  .brand-nav {
+  
+    & {
+      opacity: 0;
+    }
+    
+    &.title-hide {
+      opacity: 1;
+      transition: opacity .2s ease;
+    }
+    
+    h1 {
+      margin: 0;
+      font-family: labmono;
+      color: $red;
+      font-size: 14px;
+      font-weight: 100;
+    }
+  }
+  
+  .stage {
+    margin: 70px 50px 0 50px;
+    background: white;
+    display: inline-block;
+    font-family: tiempos-reg;
+//    border-right: 2px solid red;
+//    border-left: 2px solid red;
+    
+    &::before {
+        content:'';
+        background: white;
+        border-bottom: 2px solid red;
+        width: calc(100% - 96px);
+        height: 68px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        margin-left: 50px;
+       
+      }
+  
+  &::after {
+        width: calc(100% + 4px);
+        content:'';
+        width: 100%;
+        border-top: 2px solid $red;
+        bottom: 0;
+        left: 0;
+        z-index: 4;
+        margin: 100px 0 30px;
+      }
+
+    
+    &__text {
+      
+      & {
+        width: 60vw;
+        padding: 20px 0 0 80px;
+        font-weight: 100;
+        color: #3c3c3c;
+        font-size: 18px;
+        line-height: 1.618em; 
+        
+        span {
+          font-family: tiempos-italic;
+        }
+        
+        .quote {
+          padding: 15px;
+          font-family: labmono;
+          font-size: 20px;
+//          color: #8aacb8;
+          color: $red;
+          font-weight: bold;
+//          letter-spacing: -0.02em;
+          line-height: 1.6em;
+        }
+        
+        sup {
+          line-height: 1;
+        }
+      }
+      
+      &__title {
+        padding: 20px 0;
+
+        h1 {
+          margin: 0;
+          padding: 0 15px 7px 0;
+          font-size: 45px;
+          font-weight: 100 !important;
+          line-height: 1;
+          width: 80vw;
+          
+          @media (max-width: $tablet-break) {
+            width: auto;
+            font-size: 36px;
+          }
+        }
+
+        p {
+          margin: 0;
+          font-size: 24px;
+
+          span {
+            font-family: tiempos-italic;
+          }
+        }
+        
+        .author {
+          font-family: labmono, sans-serif;
+          font-size: 13px; 
+          color: #666;
+          line-height: 1.2em;
+          padding: 20px 0 10px 0;
+          
+          span {
+            text-transform: uppercase;
+            font-style: normal;
+            font-family: tiempos-reg;
+          }
+        }
+      }
+      
+      &__image {
+        width:75%;
+        margin: 30px 60px;
+        
+        img {
+          width: 100%;
+          height: auto;
+          display: inline-block;
+        }
+        
+        p {
+          font-family: Verdana, Arial;
+          font-size: 10px;
+          color: #111;
+          margin: 0;
+          line-height: 1.5em;
+          text-align: right;
+        }
+        
+        &--main {
+          margin: 20px 0;
+          
+          img {
+            width: 100%;
+          }
+          
+          p {
+            font-family: Verdana, Arial;
+            font-size: 10px;
+            color: #111;
+            margin: 0;
+            line-height: 1.2em;
+            text-align: right;
+          }
+        }
+        
+        iframe {
+          display: block;
+          width: 100%;
+          min-height: 300px;
+          height: 100%;
+          
+        }
+      }
+    
+    }
+  }
+  
+  .footer {
+    & {
+      margin-bottom: 100px;
+    }
+    
+//    .column {
+//      margin: 0;
+//      
+//      a {
+//        font-family: labmono;
+//        font-size: 18px;
+//        margin-top: 10px;
+//        text-decoration: none;
+//        
+//        &:hover {
+//          text-decoration: underline;
+//        }
+//      }
+//   }
+  }
+}
