@@ -1,0 +1,1 @@
+$(document).ready(function(){var o=$(".stage__text__title").offset().top;$(window).scroll(function(){var t=$(".outine"),e=$(".nav-title");$(window).scrollTop()>o?(t.addClass("outine-onscroll"),e.addClass("title-hide")):(t.removeClass("outine-onscroll"),e.removeClass("title-hide"))})});

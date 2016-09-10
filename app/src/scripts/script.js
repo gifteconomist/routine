@@ -1,9 +1,11 @@
 $(document).ready(function() {
+
+
   var titlePosY = $('.stage__text__title').offset().top;  
   
   $(window).scroll(function() {
     var outine = $('.outine');
-    var articleTitle = $('.brand-nav')
+    var articleTitle = $('.nav-title')
     if ($(window).scrollTop() > titlePosY){
       outine.addClass('outine-onscroll');
       articleTitle.addClass('title-hide');
@@ -15,6 +17,8 @@ $(document).ready(function() {
   
   });
 });
+
+
   
 
 

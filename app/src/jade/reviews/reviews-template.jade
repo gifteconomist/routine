@@ -1,16 +1,20 @@
 doctype html
 html
   head
+    meta(charset="UTF-8")
+    meta(name='viewport' content='width=device-width,initial-scale=1')
     block title
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
-    script(type='text/javascript', src='../development/scripts/script.js')
-    link(rel='stylesheet', href='../assets/css/styles.css')
+    block socialMeta
+    link(rel='stylesheet', href='../app/dist/css/styles.css')
   body(class="body-review")
-    .brand-title
-      a(href="../index.html") R
-      a(href="../index.html" class="outine") outine
-    .brand-nav 
-      block navTitle
+    div(class="row nav")
+      .brand__items
+        .brand-logo
+          a(href="/") R
+          a(href="/" class="outine") outine
+        block navTitle
+      .nav__items 
+        a(href="#about") about 
     .stage
       .stage__text
         .stage__text__title
@@ -18,12 +22,15 @@ html
         .stage__text__image--main
           block stageImageMain
         block stageText
-    .footer 
-      .row
-        .column
-          p Routine Magazine is an online space for writing on dance and performance. Routine's primary initiative is to promote documentation and criticism that supports the creation, practice and education of dance. 
-          p Inquire to submit. 
-          p Contact at #[span hello@routinemagazine.com]
-        a(name="about" class="brand-footer") R
-      .row
-        p 2016 &#169; Routine Magazine
+      block relatedContent
+    include ../includes/footer.jade
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
+    script(type='text/javascript', src='../app/dist/js/jquery.unveil.js')
+    script(type='text/javascript', src='../app/dist/js/script.js')
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-76168666-2', 'auto');
+      ga('send', 'pageview');

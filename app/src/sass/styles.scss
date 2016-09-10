@@ -13,8 +13,15 @@
 }
 
 @font-face {
+  font-family: liberation;
+  src: url('../fonts/LiberationSans-Bold.ttf'),
+       url('../fonts/LiberationSans-Bold.woff');
+}
+
+@font-face {
   font-family: labmono;
-  src: url(../fonts/LabMono-Regular.otf);
+  src: url('../fonts/LabMono-Regular.otf'),
+       url('../fonts/LabMono-Regular.woff');
 }
 
 @font-face {
@@ -40,12 +47,15 @@
 $white: #fff;
 $black: #111;
 $light-black: mix($black, #666);
-
+$primary-color: #0000ff;
+$primary-color: #ff1b00;
+$red: #ff1b00;
+$purple: #551A8B;
 //layout vars
 $mobile-break: 650px;
-$tablet-break: 800px;
+$tablet-break: 900px;
 
 //Partials
-
+@import 'settings';
 @import 'home';
 @import 'reviews';

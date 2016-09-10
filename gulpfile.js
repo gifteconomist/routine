@@ -36,7 +36,7 @@ gulp.task('css', function () {
 
 // JAVASCRIPT
 
-var jsSrc = ['app/src/js/*.js'],
+var jsSrc = ['app/src/scripts/*.js'],
 	jsDist = ['app/dist/js'];
 
 gulp.task('js', function() {  
@@ -50,6 +50,7 @@ gulp.task('js', function() {
 
 var jadeSrc = ['app/src/jade/**/*.js'],
     jadeIndexSrc = ['app/src/jade/*.jade'],
+    jadeIncludesSrc = ['app/src/jade/includes/*.jade'],
     jadeReviewsSrc = ['app/src/jade/reviews/*.jade'];
 
 gulp.task('jadeIndex', function() {
@@ -58,21 +59,27 @@ gulp.task('jadeIndex', function() {
     .pipe(gulp.dest(''));
 });
 
+gulp.task('jadeIncludes', function() {
+  return gulp.src(jadeIncludesSrc)
+    .pipe(jade())
+    .pipe(gulp.dest('templates'));
+});
+
 gulp.task('jadeReviews', function() {
   return gulp.src(jadeReviewsSrc)
     .pipe(jade())
     .pipe(gulp.dest('reviews'));
 });
 
-gulp.task('jade', ['jadeIndex', 'jadeReviews']);
+gulp.task('jade', ['jadeIndex', 'jadeIncludes', 'jadeReviews']);
 
 // ASSETS
 
 gulp.task('images', function(){
-  return gulp.src('app/src/img/**/*.+(png|jpg|jpeg|gif|svg)')
-//  .pipe(cache(imagemin({
-//      interlaced: true
-//    })))
+  return gulp.src('app/src/images/**/*.+(png|jpg|jpeg|gif|svg)')
+  .pipe(cache(imagemin({
+      interlaced: true
+    })))
   .pipe(imagemin())
   .pipe(gulp.dest('app/dist/img'))
 });
