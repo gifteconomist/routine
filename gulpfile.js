@@ -15,7 +15,7 @@ var gulp = require('gulp'),
 // SASS
 
 var sassSrc = ['app/src/sass/*.scss'],
-	sassDist = ['app/dist/css'];
+	sassDist = ['public/css'];
 
 gulp.task('css', function () {
     var processors = [
@@ -31,47 +31,47 @@ gulp.task('css', function () {
         .pipe(sass(sassOptions))
         .pipe(postcss(processors))
 		.pipe(sourcemaps.write('./maps'))
-        .pipe(gulp.dest('app/dist/css'));
+        .pipe(gulp.dest('public/css'));
 });
 
 // JAVASCRIPT
 
 var jsSrc = ['app/src/scripts/*.js'],
-	jsDist = ['app/dist/js'];
+	jsDist = ['public/js'];
 
 gulp.task('js', function() {  
     gulp.src(jsSrc) 
         .pipe(concat('script.js')) 
         .pipe(uglify()) 
-        .pipe(gulp.dest('app/dist/js')); 
+        .pipe(gulp.dest('public/js')); 
 });
-
+//**jade tasks no longer needed with switch to express
 // JADE
 
-var jadeSrc = ['app/src/jade/**/*.js'],
-    jadeIndexSrc = ['app/src/jade/*.jade'],
-    jadeIncludesSrc = ['app/src/jade/includes/*.jade'],
-    jadeReviewsSrc = ['app/src/jade/reviews/*.jade'];
-
-gulp.task('jadeIndex', function() {
-  return gulp.src(jadeIndexSrc)
-    .pipe(jade())
-    .pipe(gulp.dest(''));
-});
-
-gulp.task('jadeIncludes', function() {
-  return gulp.src(jadeIncludesSrc)
-    .pipe(jade())
-    .pipe(gulp.dest('templates'));
-});
-
-gulp.task('jadeReviews', function() {
-  return gulp.src(jadeReviewsSrc)
-    .pipe(jade())
-    .pipe(gulp.dest('reviews'));
-});
-
-gulp.task('jade', ['jadeIndex', 'jadeIncludes', 'jadeReviews']);
+//var jadeSrc = ['app/src/jade/**/*.js'],
+//    jadeIndexSrc = ['app/src/jade/*.jade'],
+//    jadeIncludesSrc = ['app/src/jade/includes/*.jade'],
+//    jadeReviewsSrc = ['app/src/jade/reviews/*.jade'];
+//
+//gulp.task('jadeIndex', function() {
+//  return gulp.src(jadeIndexSrc)
+//    .pipe(jade())
+//    .pipe(gulp.dest(''));
+//});
+//
+//gulp.task('jadeIncludes', function() {
+//  return gulp.src(jadeIncludesSrc)
+//    .pipe(jade())
+//    .pipe(gulp.dest('templates'));
+//});
+//
+//gulp.task('jadeReviews', function() {
+//  return gulp.src(jadeReviewsSrc)
+//    .pipe(jade())
+//    .pipe(gulp.dest('reviews'));
+//});
+//
+//gulp.task('jade', ['jadeIndex', 'jadeIncludes', 'jadeReviews']);
 
 // ASSETS
 
@@ -81,7 +81,7 @@ gulp.task('images', function(){
       interlaced: true
     })))
   .pipe(imagemin())
-  .pipe(gulp.dest('app/dist/img'))
+  .pipe(gulp.dest('public/img'))
 });
 
 // WATCH
@@ -89,9 +89,9 @@ gulp.task('images', function(){
 gulp.task('watch', function() {  
     gulp.watch(sassSrc, ['css']);
     gulp.watch(jsSrc, ['js']); 
-	gulp.watch([jadeIndexSrc, jadeReviewsSrc], ['jade']);
+//	gulp.watch([jadeIndexSrc, jadeIncludesSrc, jadeReviewsSrc], ['jade']);
 });
 
 
-gulp.task('default', ['css', 'js', 'jade', 'images', 'watch']);  
+gulp.task('default', ['css', 'js', 'images', 'watch']);  
 

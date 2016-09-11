@@ -1,0 +1,28 @@
+doctype html 
+html  
+  head
+    meta(charset="UTF-8")
+    meta(name='viewport' content='width=device-width,initial-scale=1')
+    block title
+    meta(name="google-site-verification" content="spK5BOUdQKtQM21L3cMYxQvEv44c2YQikpAwXCWiTO0")
+    link(rel='stylesheet', href='css/styles.css')
+  body(class="body-index")
+    include includes/index-hero.jade
+    div(class="row nav transparent")
+      .brand__items
+        a(href="/" class="brand-logo") Routine 
+      .nav__items 
+        a(href="#about") about 
+    .stage
+      block stageItems 
+    include includes/footer.jade
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
+    script(type='text/javascript', src='js/jquery.unveil.js') 
+    script(type='text/javascript', src='js/script.js')
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-76168666-2', 'auto');
+      ga('send', 'pageview');              
