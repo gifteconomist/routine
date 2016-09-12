@@ -22,16 +22,18 @@ $(document).ready(function() {
     else if ($(document.body).hasClass('body-index')) {
       console.log('thisistheindex');
       var postHeroTitlePosY = $('.stage').offset().top;
-      var brandLogo = $('.row.nav')
-      
+      var brandLogo = $('.row.nav');
+      var brandBackground = $('.stage-nav');
       
       console.log(postHeroTitlePosY)
       
       if ($(window).scrollTop() > postHeroTitlePosY){
-        brandLogo.removeClass('transparent');
+        brandBackground.removeClass('transparent');
+        brandLogo.removeClass('absolute');
       }
       else {
-        brandLogo.addClass('transparent');
+        brandBackground.addClass('transparent');
+        brandLogo.addClass('absolute')
       }
     }
   

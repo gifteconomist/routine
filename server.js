@@ -1,6 +1,11 @@
+require('dotenv').config();
+
 var express = require('express');
 var app = express();
 
+// require controllers
+var reviews = require('./server/controllers/Reviews');
+ 
 app.set('view engine', 'jade');
 app.use(express.static('public'));
 
@@ -9,14 +14,11 @@ app.get('/', function (req, res) {
 });
 
 app.get('/reviews/:name', function (req, res) {
-//  controller.reviews(req.params.name, res);
-  console.log(req.params);
-  var template = 'reviews/' + req.params.name;
-  res.render(template);
+  reviews.show(req, res);
 });
 
 
 
 app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+  console.log('Routine Dev <3');
 });
