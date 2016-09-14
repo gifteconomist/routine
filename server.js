@@ -5,12 +5,13 @@ var app = express();
 
 // require controllers
 var reviews = require('./server/controllers/Reviews');
+var feeds = require('./server/controllers/Feed');
  
 app.set('view engine', 'jade');
 app.use(express.static('public'));
 
 app.get('/', function (req, res) {
-  res.render('index');
+  feeds.show(req, res);
 });
 
 app.get('/reviews/:name', function (req, res) {

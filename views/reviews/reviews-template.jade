@@ -3,7 +3,7 @@ html
   head
     meta(charset="UTF-8")
     meta(name='viewport' content='width=device-width,initial-scale=1')
-    block title
+    title Routine Magazine | #{title}
     block socialMeta
     link(rel='stylesheet', href='../css/styles.css')
   body(class="body-review")
@@ -12,16 +12,19 @@ html
         .brand-logo
           a(href="/") R
           a(href="/" class="outine") outine
-        block navTitle
+        .nav-title= title
       .nav__items 
         a(href="#about") about 
     .stage
       .stage__text
         .stage__text__title
-          block stageTitle
+          h1= title
+          p!= subtitle
+          p(class="author") by #[span #{contributor.name}] on #{date}
         .stage__text__image--main
           block stageImageMain
         block stageText
+        p(class="author-blurb") #[b #{contributor.name}] #{contributor.bio}
       block relatedContent
     include ../includes/footer.jade
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
