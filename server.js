@@ -8,7 +8,8 @@ var reviews = require('./server/controllers/Reviews');
 var feeds = require('./server/controllers/Feed');
  
 app.set('view engine', 'jade');
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
+console.log(__dirname + '/public')
 
 app.get('/', function (req, res) {
   feeds.show(req, res);
