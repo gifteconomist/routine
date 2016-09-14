@@ -1,0 +1,14 @@
+node_modules/
+*.sass-cache
+*.css.map
+*.DS_Store
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+app/
+templates/
+reviews/
+index.html
+index-template.html
+gulpfile.js
