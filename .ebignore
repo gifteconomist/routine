@@ -8,11 +8,10 @@ node_modules/
 !.elasticbeanstalk/*.global.yml
 app/
 templates/
-reviews/
 public/img/
 index.html
 .gitignore
 .env
-.git
+.git/
 index-template.html
 gulpfile.js
