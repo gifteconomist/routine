@@ -6,8 +6,8 @@ var gulp = require('gulp'),
 	sourcemaps = require('gulp-sourcemaps'), //maps css to sass file in the DOM
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
-    jade = require('gulp-jade'),
-	imagemin = require('gulp-imagemin'); //optimize images
+//    jade = require('gulp-jade'),
+//	imagemin = require('gulp-imagemin'); //optimize images
 	cache = require('gulp-cache') //caches images so that minified images dont get reprocessed
 
 
@@ -75,14 +75,14 @@ gulp.task('js', function() {
 
 // ASSETS
 
-gulp.task('images', function(){
-  return gulp.src('app/src/images/**/*.+(png|jpg|jpeg|gif|svg)')
-  .pipe(cache(imagemin({
-      interlaced: true
-    })))
-  .pipe(imagemin())
-  .pipe(gulp.dest('public/img'))
-});
+//gulp.task('images', function(){
+//  return gulp.src('app/src/images/**/*.+(png|jpg|jpeg|gif|svg)')
+//  .pipe(cache(imagemin({
+//      interlaced: true
+//    })))
+//  .pipe(imagemin())
+//  .pipe(gulp.dest('public/img'))
+//});
 
 // WATCH
 
@@ -93,5 +93,5 @@ gulp.task('watch', function() {
 });
 
 
-gulp.task('default', ['css', 'js', 'images', 'watch']);  
+gulp.task('default', ['css', 'js', 'watch']);  
 

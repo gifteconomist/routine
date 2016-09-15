@@ -13,9 +13,10 @@ html
         a(href="/" class="brand-logo") Routine 
       .nav__items 
         a(href="#about") about 
-    .stage
-      div(class="stage-nav transparent")
-      block stageItems 
+    .stage-wrapper
+      .stage
+        div(class="stage-nav transparent")
+        block stageItems 
     include includes/footer.jade
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
     script(type='text/javascript', src='js/jquery.unveil.js') 

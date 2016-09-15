@@ -71,6 +71,8 @@ body {
 .stage {
   width: calc(100vw - 230px);
   margin: 0 auto;
+  margin-top: 600px;
+  overflow: visible;
   padding: 70px 0;
   @media (max-width: 1000px) {
     width: calc(100vw - 150px);
@@ -321,7 +323,7 @@ body {
 .footer {
   
   & {
-    margin: 20px 50px 5%;
+    margin: 0px 50px 5%;
     @media (max-width: 1250px) {
       margin-bottom: 6%
     } 
@@ -501,14 +503,43 @@ body {
 }
 
 .hero {
-  min-height: 600px;
-  background-image: url(https://nplusonemag.com/wp-content/uploads/2016/09/Ac-hero-large.jpg);
+  & {
+    position: relative;
+  }
+  &-banner {
+      height: 616px;
+      top: 0;
+      z-index: -1;
+      position: fixed;
+       width: 100%;
+    &-image {
+      background-image: url(https://nplusonemag.com/wp-content/uploads/2016/09/Ac-hero-large.jpg);
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      z-index: 0;
+          width: 100%;
+      position: absolute;
+      display: block;
+          top: 0;
+    bottom: 0;
+    }
+  }
 }
 
-.row.nav.absolute {
-  position: absolute;
+.body-index {
+  position: relative;
+  background: white;
 }
+
+//.row.nav.absolute {
+//  position: absolute;
+//}
 
 .stage-nav.transparent {
   background: transparent;
 }
+
+.stage-wrapper, .footer-wrapper {
+  background: white;
+}
+
