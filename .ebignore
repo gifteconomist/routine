@@ -11,5 +11,8 @@ templates/
 reviews/
 public/img/
 index.html
+.gitignore
+.env
+.git
 index-template.html
 gulpfile.js
