@@ -9,6 +9,7 @@ node_modules/
 app/
 templates/
 reviews/
+public/img/
 index.html
 index-template.html
 gulpfile.js
