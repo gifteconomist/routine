@@ -4,7 +4,6 @@ var database = require('../modules/Database');
 
 module.exports = {
   show: function(req, res) {
-    console.log("in show");
     console.log(req.params);
     var date = req.params.date;
     

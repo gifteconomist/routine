@@ -6,6 +6,7 @@ var app = express();
 // require controllers
 var reviews = require('./server/controllers/Reviews');
 var feeds = require('./server/controllers/Feed');
+var contributors = require('./server/controllers/Contributors')
  
 app.set('view engine', 'jade');
 app.use(express.static(__dirname + '/public'));
@@ -17,6 +18,10 @@ app.get('/', function (req, res) {
 
 app.get('/reviews/:name', function (req, res) {
   reviews.show(req, res);
+});
+
+app.get('/contributors/:slug', function(req, res) {
+  contributors.show(req, res);
 });
 
 

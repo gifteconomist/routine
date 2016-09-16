@@ -334,6 +334,9 @@
         &:hover {
           color: $primary-color;
         }
+        span {
+          text-transform: capitalize;
+        }
       }
       img {
         width: 100%;

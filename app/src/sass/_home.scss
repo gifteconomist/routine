@@ -56,7 +56,7 @@ body {
       font-family: labmono;
       text-transform: uppercase;
       color: $primary-color;
-      color: $black;
+//      color: $black;
       text-decoration: none;
 
       @media (max-width: $mobile-break) {
@@ -71,7 +71,6 @@ body {
 .stage {
   width: calc(100vw - 230px);
   margin: 0 auto;
-  margin-top: 600px;
   overflow: visible;
   padding: 70px 0;
   @media (max-width: 1000px) {
@@ -507,21 +506,54 @@ body {
     position: relative;
   }
   &-banner {
-      height: 616px;
+      height: 700px;
       top: 0;
       z-index: -1;
       position: fixed;
        width: 100%;
     &-image {
-      background-image: url(https://nplusonemag.com/wp-content/uploads/2016/09/Ac-hero-large.jpg);
-      background-size: auto 100%;
+      background-image: url(../img/jillsigman1.jpg);
+      background-size: 100% 103%;
       background-repeat: no-repeat;
       z-index: 0;
-          width: 100%;
+      width: 100%;
       position: absolute;
-      display: block;
-          top: 0;
-    bottom: 0;
+      top: -137px;
+      bottom: 58px;
+    }
+    &-text {
+      position: relative;
+      height: 100%;
+      &-table {
+        display: table;
+        width: 100%;
+        height: 100%;
+        &-cell {
+          display: table-cell;
+          vertical-align: middle;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          h2, h5, h6 {
+            color: red;
+            font-family: tiempos-reg;
+            margin: 0;
+            font-size: 42px;
+          }
+          h2 {
+            font-weight: 100;
+          }
+          h5 {
+            font-family: labmono;
+            font-size: 22px;
+            padding: 10px 5px;
+          }
+          h6 {
+            font-family: arial;
+            font-size: 20px;
+          }
+        }
+      }
     }
   }
 }
@@ -529,6 +561,10 @@ body {
 .body-index {
   position: relative;
   background: white;
+  
+  .stage {
+    margin-top: 600px;
+  }
 }
 
 //.row.nav.absolute {

@@ -20,18 +20,18 @@ html
         .stage__text__title
           h1= title
           p!= subtitle
-          p(class="author") by #[span #{contributor.name}] on #{date}
+          p(class="author") by #[span #[a(href="../contributors/#{contributor.slug}") #{contributor.name}]] on #{date}
         .stage__text__image--main
           block stageImageMain
         block stageText
-        p(class="author-blurb") #[b #{contributor.name}] #{contributor.bio}
+        p(class="author-blurb") #[b #[a(href="../contributors/#{contributor.slug}") #{contributor.name}]] #{contributor.bio}
       .related-content 
         h4 More Pieces
         .row
           each relatedArticle in relatedContent
             a(class="related-content__item" href="#{relatedArticle.name}")
               img(src="https://assets.routinemagazine.com/img/load.png" data-src='https://assets.routinemagazine.com/img/#{relatedArticle.leadImage}' class="lazyload")
-              h5 #{relatedArticle.type}: #{relatedArticle.indexTitle}
+              h5 #[span #{relatedArticle.type}]: #{relatedArticle.indexTitle}
     include ../includes/footer.jade
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
     script(type='text/javascript', src='../js/jquery.unveil.js')

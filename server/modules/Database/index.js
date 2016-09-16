@@ -42,10 +42,18 @@ var Contributor = database.define('contributors', {
   bio: Sequelize.STRING,
   fullBio: Sequelize.STRING,
   website: Sequelize.STRING,
-  headshot: Sequelize.STRING
+  headshot: Sequelize.STRING,
+  slug: Sequelize.STRING,
+//  reviews: {
+//    type: 'hasMany',
+//    model: 'Article',
+//    foreignKey: 'contributorId'
+//  },
 });
 
 Articles.belongsTo(Contributor, {foreignKey : 'contributorId'});
+
+Contributor.hasMany(Articles, {foreignKey: 'contributorId'})
 
 module.exports = {
   articles: Articles,

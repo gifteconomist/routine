@@ -14,4 +14,4 @@ block stageItems
         a(href="reviews/#{article.name}")
           h1= article.indexTitle
         h5= article.indexSubtitle
-        h4 #{article.type} #[span &nbsp; &#42; &nbsp;] #{article.contributor.name} #[span &nbsp; &#42; &nbsp;] #{article.date}
+        h4 #{article.type} #[span &nbsp; &#42; &nbsp;] #[a(href="contributors/#{article.contributor.slug}") #{article.contributor.name}] #[span &nbsp; &#42; &nbsp;] #{article.date}
