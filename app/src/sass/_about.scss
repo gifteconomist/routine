@@ -1,0 +1,20 @@
+.body-about {
+  .stage {
+    & {
+      color: $light-black;
+    }
+    h1 {
+      font-family: labmono;
+      text-align: center;
+    }
+    h2 {
+      font-family: labmono;
+      padding: 0 100px
+    }
+    p {
+      font-family: tiempos-reg;
+      font-size: 18px;
+      padding: 0 100px;
+    }
+  }
+}

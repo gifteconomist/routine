@@ -6,12 +6,12 @@ block stageItems
   each article in articles
     .stage__item
       h6 #{article.type}#[span &#42;]
-      a(href="reviews/#{article.name}" class="row")
+      a(href="reviews/#{article.name}" class="row article-images")
         img(src="https://assets.routinemagazine.com/img/load.png" data-src='https://assets.routinemagazine.com/img/#{article.leadImage}' class="lazyload first")
         img(src="https://assets.routinemagazine.com/img/load.png" data-src='https://assets.routinemagazine.com/img/#{article.secondImage}' class="lazyload middle")
         img(src="https://assets.routinemagazine.com/img/load.png" data-src='https://assets.routinemagazine.com/img/#{article.thirdImage}' class="lazyload last")
       .stage__item__text
         a(href="reviews/#{article.name}")
-          h1= article.indexTitle
+          h2!= article.indexTitle
         h5= article.indexSubtitle
         h4 #{article.type} #[span &nbsp; &#42; &nbsp;] #[a(href="contributors/#{article.contributor.slug}") #{article.contributor.name}] #[span &nbsp; &#42; &nbsp;] #{article.date}

@@ -10,6 +10,7 @@ module.exports = {
     database.articles.findAll({
       order: [['date', 'DESC']], 
       limit: 10,
+      offset: 1,
       include: [{
         model: database.contributor
       }] 

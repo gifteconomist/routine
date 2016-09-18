@@ -3,12 +3,32 @@
     h1 {
       font-family: labmono;
       color: $light-black;
+      text-align: center;
+      padding: 25px 0 15px;
     }
     p {
       font-family: tiempos-reg;
-      width: 60%;
       display: inline-block;
       color: $black;
+      padding: 40px 100px 35px;
+      margin: 0 auto;
+    }
+    
+    h3 {
+      font-family: labmono;
+      text-align: center;
+      color: $light-black;
+    }
+    .stage__item {
+      padding: 40px 100px 35px;
+    }
+    
+    hr {
+      box-sizing: border-box;
+      position: relative;
+      border: 0;
+      border-top: 1px solid #f4f5f6;
+      margin: 20px 100px;
     }
   }
 }

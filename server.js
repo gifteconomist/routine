@@ -24,6 +24,10 @@ app.get('/contributors/:slug', function(req, res) {
   contributors.show(req, res);
 });
 
+app.get('/about', function(req, res) {
+   res.render('about');
+})
+
 
 var port = process.env.PORT || 3000
 
