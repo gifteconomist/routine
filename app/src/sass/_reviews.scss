@@ -209,6 +209,15 @@
             text-transform: uppercase;
             font-style: normal;
             font-family: tiempos-reg;
+            a {
+              color: #666;
+              border-bottom: 1px solid #999;
+              padding-bottom: 1px;
+              &:hover {
+                color: $primary-color; 
+                border-bottom: 1px solid $primary-color;
+              }
+            }
           }
         }
       }

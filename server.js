@@ -4,6 +4,7 @@ var express = require('express');
 var app = express();
 
 // require controllers
+var review = require('./server/controllers/Review');
 var reviews = require('./server/controllers/Reviews');
 var feeds = require('./server/controllers/Feed');
 var contributors = require('./server/controllers/Contributors')
@@ -16,8 +17,12 @@ app.get('/', function (req, res) {
   feeds.show(req, res);
 });
 
-app.get('/reviews/:name', function (req, res) {
+app.get('/reviews', function (req, res) {
   reviews.show(req, res);
+});
+
+app.get('/reviews/:name', function (req, res) {
+  review.show(req, res);
 });
 
 app.get('/contributors/:slug', function(req, res) {

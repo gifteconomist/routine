@@ -11,12 +11,24 @@ html
     .stage
       h1(class="about-titles") About
       p Routine is an online space for dance and performance, publishing weekly reviews on dance events in NYC. Through critical writing that attends to the afterlives of performance events, Routine responds to the cultural imperative of perfomance, choreography, and the labor of dance makers. 
-      p Get involved with our growth by subscribing to our newsletter, connecting with our socials,  submitting writing, and chatting us up. 
-      h2 Newsletter
+      p Get involved with our growth by #[a(href="#newsletter") subscribing to our newsletter], connecting with our #[a(href="#social") socials], #[a(href="#submissions") submitting writing], and #[a(href="#contact") chatting us up]. 
+      h2(id="newsletter") Newsletter
       p A kind of movement practice in own right, Routine takes email seriously. Subscribe to get updates on new Routine content and upcoming NYC performances, sent out as a curated list, every Wednesday. 
-      h2 Social
-      p As part of our mission to promote dance literacy, we  use social media to routinely share snippets of performance writing that #[i moves] us. 
-      h2 Submissions
+      #mc_embed_signup
+          form(action="//routinemagazine.us14.list-manage.com/subscribe/post?u=98eee397f8723c9689cf4a1ea&amp;id=35a7b1a764" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate)
+            a(name="subscribe" id="mc_embed_signup_scroll")
+              .row.center
+                input(type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email Address" required)
+                input(type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="button")
+      h2(id="social") Social
+      p As part of our mission to promote dance literacy, we use social media to routinely share snippets of performance writing that #[i moves] us. 
+      p(style="text-align:center;")
+        a(href="")
+          img(class="facebook" src="http://assets.routinemagazine.com/img/facebook-logo.png")
+      h2(id="submissions") Submissions
+      p From dancers, dance makers, and witnesses of dance, Routine is currently accepting writing on performance events and performance culture. Accepted submissions are compensated and published online under Routine's banner. Read our #[a(href="") submission guidelines] to learn more. 
+      h2(id="contact") Contact
+      p Send us mail at #[a(href="mailto:hello@routinemagazine.com") hello@routinemagazine.com]
       
     include includes/footer.jade
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')

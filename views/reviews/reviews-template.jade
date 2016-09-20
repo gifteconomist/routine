@@ -15,10 +15,11 @@ html
         .nav-title= title
       .nav__items 
         a(href="/about") about 
+        a(href="/reviews") reviews
     .stage
       .stage__text
         .stage__text__title
-          h1= title
+          h1!= title
           p!= subtitle
           p(class="author") by #[span #[a(href="/contributors/#{contributor.slug}") #{contributor.name}]] on #{date}
         .stage__text__image--main

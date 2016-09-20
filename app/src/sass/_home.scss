@@ -11,7 +11,7 @@ body {
   position: fixed;
   top: 8px;
   left: 50px;
-  padding-bottom: 6px;
+  padding-bottom: 5px;
   border-bottom: 2px solid #ff1b00;
   width: calc(100% - 100px);
   
@@ -58,6 +58,7 @@ body {
       color: $primary-color;
 //      color: $black;
       text-decoration: none;
+      padding-left: 45px;
 
       @media (max-width: $mobile-break) {
         display: none;
@@ -80,7 +81,6 @@ body {
     width: calc(100vw - 100px);
   }
   @media (max-width: $mobile-break) {
-    margin-bottom: 20px;
   }
   @media (max-width: 550px) {
     width: calc(100vw - 60px);
@@ -370,7 +370,7 @@ body {
     flex-direction: row;
     margin-bottom: 40px;
     
-    a.brand-footer {
+    .brand-footer {
       color: $primary-color;
       font-size: 2.5rem;
       font-family: Ceremony;
@@ -432,6 +432,7 @@ body {
     
     #mc_embed_signup {
       padding-top: 20px;
+      
     }
     font-family: labmono;
     h1 {
@@ -445,6 +446,7 @@ body {
     
     p {
       margin: 0;
+      text-align: center;
     }
     
     input.email {
@@ -570,11 +572,62 @@ body {
 .body-index {
   position: relative;
   background: white;
+  margin-top: 600px;
   
-  .stage {
-    margin-top: 600px;
+  @media (max-width: 1000px) {
+    
+    & {
+      margin-top: 500px
+    }
+    .hero-banner {
+      height: 500px;
+    }
   }
+  @media (max-width: $tablet-break) {
+    & {
+      margin-top: 450px;
+    }
+    .hero-banner {
+      height: 450px;
+    }
+    .hero-banner-image {
+      top: -50px; 
+      background-size: cover;
+    }
+    h1 {
+      font-size: 30px;
+    }
+    h5 {
+      font-size: 18px;
+    }
+    h6 {
+      font-size: 15px;  
+    }
+    .hero-banner-text-table-cell {
+      padding-top: 120px
+    }
+  }
+  @media (max-width: 750px) {
+    .hero-banner-text-table-cell {
+      padding-top: 100px
+    }
+    .stage {
+      padding: 50px 0;
+    }
+  }
+  @media (max-width: $mobile-break) {
+    & {
+      margin-top: 400px
+    }
+  }
+  @media (max-width: 550px) {
+  }
+  @media (max-width: 414px) {
+  }
+  
 }
+
+
 
 //.row.nav.absolute {
 //  position: absolute;
