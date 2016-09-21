@@ -9,7 +9,7 @@ body {
 .nav {
   z-index: 6;
   position: fixed;
-  top: 8px;
+  top: 9px;
   left: 50px;
   padding-bottom: 5px;
   border-bottom: 2px solid #ff1b00;
@@ -344,10 +344,10 @@ body {
       margin-bottom: 5%
     }
     @media (max-width: 550px) {
-      margin: 20px 30px 5%;
+      margin: 0px 30px 5%;
     }
     @media (max-width: 414px) {
-      margin: 20px 15px 5%;
+      margin: 0px 15px 5%;
     }
   }
   
@@ -522,7 +522,7 @@ body {
       position: fixed;
        width: 100%;
     &-image {
-      background-image: url(https://assets.routinemagazine.com/img/noira-6-home.png);
+      background-image: url(https://assets.routinemagazine.com/img/noira-6-home-min.jpg);
       background-size: 100% auto;
       background-repeat: no-repeat;
       z-index: 0;
@@ -545,7 +545,7 @@ body {
           padding: 200px 0 0 0;
           height: 100%;
           text-align: center;
-          h1, h5, h6 {
+          h1, h3, h6 {
             color: red;
             font-family: tiempos-reg;
             margin: 0;
@@ -554,7 +554,7 @@ body {
           h1 {
             font-weight: 100;
           }
-          h5 {
+          h3 {
             font-family: labmono;
             font-size: 22px;
             padding: 10px 5px;
@@ -597,7 +597,7 @@ body {
     h1 {
       font-size: 30px;
     }
-    h5 {
+    h3 {
       font-size: 18px;
     }
     h6 {

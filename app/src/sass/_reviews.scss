@@ -333,6 +333,11 @@
       text-decoration: none;
       display: flex;
       flex-direction: column;
+      &:hover {
+        h5 {
+          color:red;
+        }
+      }
       h5 {
         margin: 5px 0 0 0;
         font-weight:100;
