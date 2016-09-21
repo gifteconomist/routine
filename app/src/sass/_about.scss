@@ -11,12 +11,25 @@
     h2 {
       font-family: labmono;
       padding: 55px 100px 0;
+      @media (max-width: 750px) {
+        padding:  55px 50px 0;
+      }
+      @media (max-width: $mobile-break) {
+        padding:  55px 20px 0;
+      }
     }
     p {
       font-family: tiempos-reg;
       font-size: 18px;
       padding: 0 100px;
       line-height: 1.5;
+      @media (max-width: 750px) {
+        padding:  0px 50p;
+      }
+      @media (max-width: $mobile-break) {
+        padding:  0px 20px;
+        font-size: 16px;
+      }
     }
     a {
 //      padding: 0 100px;
@@ -85,11 +98,11 @@
         color: $primary-color;
       }
       
-      @media (max-width: $mobile-break) {
-        margin: 0 0 15px 0;
-        width: 100%;
-        box-sizing: border-box;
-      }
+//      @media (max-width: $mobile-break) {
+//        margin: 0 0 15px 0;
+//        width: 100%;
+//        box-sizing: border-box;
+//      }
 
     }
     
@@ -112,10 +125,10 @@
         border: none;
         outline: 0;
       }
-      @media (max-width: $mobile-break) {
-        width: 100%;
-        box-sizing: border-box;
-      }
+//      @media (max-width: $mobile-break) {
+//        width: 100%;
+//        box-sizing: border-box;
+//      }
     }
   }
 }
