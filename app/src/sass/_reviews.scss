@@ -82,7 +82,7 @@
     &::before {
         content:'';
         background: white;
-        border-bottom: 2px solid $primary-color;
+//        border-bottom: 2px solid $primary-color;
         width: calc(100% - 100px);
         height: 68px;
         position: fixed;

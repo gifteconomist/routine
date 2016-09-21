@@ -13,6 +13,22 @@ app.set('view engine', 'jade');
 app.use(express.static(__dirname + '/public'));
 console.log(__dirname + '/public')
 
+
+// Middleware
+
+// Redirects *.html urls to non .html version
+app.use(function (req, res, next) {
+  var url = req.url;
+  var ending = url.substring(url.length - 5, url.length);
+  if (ending === '.html') {
+    url = url.replace(ending, '');
+    return res.redirect(url);
+  }
+  next();
+});
+
+// Routes
+
 app.get('/', function (req, res) {
   feeds.show(req, res);
 });
