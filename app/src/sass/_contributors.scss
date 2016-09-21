@@ -4,14 +4,21 @@
       font-family: labmono;
       color: $light-black;
       text-align: center;
-      padding: 25px 0 15px;
+      padding: 50px 0 0;
+      margin: 0;
     }
     p {
       font-family: tiempos-reg;
       display: inline-block;
-      color: $black;
+      color:$light-black;
       padding: 40px 100px 35px;
       margin: 0 auto;
+      font-size: 18px;
+      line-height: 1.5;
+      a {
+        color: red;
+        text-decoration: none;
+      }
     }
     
     h3 {
