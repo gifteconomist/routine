@@ -31,7 +31,7 @@ html
         .row
           each relatedArticle in relatedContent
             a(class="related-content__item" href="#{relatedArticle.name}")
-              img(src="https://assets.routinemagazine.com/img/load.png" data-src='https://assets.routinemagazine.com/img/#{relatedArticle.leadImage}' class="lazyload")
+              img(src="https://assets.routinemagazine.com/img/load.png" data-src='https://assets.routinemagazine.com/img/#{relatedArticle.leadImage}' class="lazyload" alt="#{relatedArticle.name} is related")
               h5 #[span #{relatedArticle.type}]: !{relatedArticle.indexTitle}
     include ../includes/footer.jade
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
