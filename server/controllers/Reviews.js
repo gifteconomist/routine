@@ -4,8 +4,7 @@ var database = require('../modules/Database');
 
 module.exports = {
   show: function(req, res) {
-    console.log(req.params);
-    console.log('inshow')
+    console.log(req.url);
     var date = req.params.date;
     
     database.articles.findAll({
