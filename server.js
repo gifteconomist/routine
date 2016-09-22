@@ -20,7 +20,7 @@ console.log(__dirname + '/public')
 app.use(function (req, res, next) {
   var url = req.url;
   var ending = url.substring(url.length - 5, url.length);
-  if (ending === '.html') {
+  if (ending === '.html' && url != 'https://routinemagazine.com/google92ffbcadb4e54db4.html') {
     url = url.replace(ending, '');
     return res.redirect(url);
   }

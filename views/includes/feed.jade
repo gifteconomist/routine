@@ -2,9 +2,9 @@ each article in articles
   .stage__item
     h6 #{article.type}#[span &#42;]
     a(href="reviews/#{article.name}" class="row article-images")
-      img(src="https://assets.routinemagazine.com/img/load.png" data-src='https://assets.routinemagazine.com/img/#{article.leadImage}' class="lazyload first")
-      img(src="https://assets.routinemagazine.com/img/load.png" data-src='https://assets.routinemagazine.com/img/#{article.secondImage}' class="lazyload middle")
-      img(src="https://assets.routinemagazine.com/img/load.png" data-src='https://assets.routinemagazine.com/img/#{article.thirdImage}' class="lazyload last")
+      img(src="https://assets.routinemagazine.com/img/load.png" data-src='https://assets.routinemagazine.com/img/#{article.leadImage}' class="lazyload first" alt="#{article.indexTitle}, 3")
+      img(src="https://assets.routinemagazine.com/img/load.png" data-src='https://assets.routinemagazine.com/img/#{article.secondImage}' class="lazyload middle" alt="#{article.indexTitle}, 3")
+      img(src="https://assets.routinemagazine.com/img/load.png" data-src='https://assets.routinemagazine.com/img/#{article.thirdImage}' class="lazyload last"  alt="#{article.indexTitle}, 3")
     .stage__item__text
       a(href="reviews/#{article.name}")
         h2!= article.indexTitle
