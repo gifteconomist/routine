@@ -50,6 +50,10 @@ app.get('/about', function(req, res) {
    res.render('about');
 })
 
+app.get('/google92ffbcadb4e54db4.html', function(req, res) {
+   res.render('google92ffbcadb4e54db4.html');
+})
+
 
 var port = process.env.PORT || 3000
 
