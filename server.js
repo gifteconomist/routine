@@ -21,7 +21,7 @@ app.use(function (req, res, next) {
   var url = req.url;
   var ending = url.substring(url.length - 5, url.length);
   console.log(url)
-  if (ending === '.html' && url != 'google92ffbcadb4e54db4.html') {
+  if (ending === '.html' && url != '/google92ffbcadb4e54db4.html') {
     url = url.replace(ending, '');
     return res.redirect(url);
   }
