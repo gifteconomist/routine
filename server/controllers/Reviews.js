@@ -12,7 +12,10 @@ module.exports = {
       limit: 10,
       include: [{
         model: database.contributor
-      }] 
+      }], 
+      where: {
+        active: true,
+      }
     }).then(function(articles){
       var articlesData = [];
       _.forEach(articles, function(article) {
