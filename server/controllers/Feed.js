@@ -4,20 +4,21 @@ var database = require('../modules/Database');
 
 module.exports = {
   show: function(req, res) {
-    console.log(req.params);
     var date = req.params.date;
     
-    database.articles.findAll({
+    var query = {
       order: [['date', 'DESC']], 
       limit: 10,
       offset: 1,
       include: [{
         model: database.contributor
       }], 
-      where: {
-        active: true,
-      }
-    }).then(function(articles){
+    };
+    
+    if (process.env.NODE_ENV === 'production') {
+      query['where'] = { active: true };
+    }
+    database.articles.findAll(query).then(function(articles){
       var articlesData = [];
       _.forEach(articles, function(article) {
         var tempArticle = article.get({plain: true});
