@@ -19,7 +19,8 @@ module.exports = {
       reviewData.date = moment(reviewData.date).format('MMMM Do, YYYY');
       return reviewData;
     }).then(function(reviewData){
-      return database.articles.findAll({
+      
+      var query = {
         order: [['date', 'DESC']], 
         limit: 3,
         where: {
@@ -27,7 +28,13 @@ module.exports = {
             $ne: reviewData.name
           }
         }
-      }).then(function(articles){
+      }
+    
+      if (process.env.NODE_ENV === 'production') {
+        query.where.active = true;
+      }
+      
+      return database.articles.findAll(query).then(function(articles){
         var articlesData = [];
         _.forEach(articles, function(article) {
           var tempArticle = article.get({plain: true});
