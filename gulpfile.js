@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 	sourcemaps = require('gulp-sourcemaps'), //maps css to sass file in the DOM
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
-//    jade = require('gulp-jade'),
+    jade = require('gulp-jade'),
 //	imagemin = require('gulp-imagemin'); //optimize images
 	cache = require('gulp-cache') //caches images so that minified images dont get reprocessed
 
@@ -44,6 +44,12 @@ gulp.task('js', function() {
         .pipe(concat('script.js')) 
         .pipe(uglify()) 
         .pipe(gulp.dest('public/js')); 
+});
+
+gulp.task('jade', function() {
+  return gulp.src('public/reviews/weedheart.jade')
+    .pipe(jade())
+    .pipe(gulp.dest('app/dist'));
 });
 //**jade tasks no longer needed with switch to express
 // JADE
@@ -89,9 +95,10 @@ gulp.task('js', function() {
 gulp.task('watch', function() {  
     gulp.watch(sassSrc, ['css']);
     gulp.watch(jsSrc, ['js']); 
+    gulp.watch('public/reviews/weedheart.jade', ['jade']); 
 //	gulp.watch([jadeIndexSrc, jadeIncludesSrc, jadeReviewsSrc], ['jade']);
 });
 
 
-gulp.task('default', ['css', 'js', 'watch']);  
+gulp.task('default', ['css', 'js', 'jade', 'watch']);  
 
