@@ -49,6 +49,18 @@ app.get('/about', function(req, res) {
    res.render('about');
 });
 
+app.get('/robots.txt', function(req, res) {
+  if (process.env.NODE_ENV === 'production') {
+    res.sendFile('production/robots.txt', {root: './public'});
+  } else {
+    res.sendFile('staging/robots.txt', {root: './public'}); 
+  }
+});
+
+app.get('*', function(req, res){
+  res.redirect('/');
+});
+
 //app.get('/search', function(req, res) {
 //  res.json([{
 //      title: "Dance 1",

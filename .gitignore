@@ -9,4 +9,4 @@ fonts/
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
- 
+example.js
