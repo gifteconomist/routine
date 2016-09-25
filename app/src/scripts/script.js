@@ -3,7 +3,6 @@ $(document).ready(function() {
   $(window).scroll(function() {
     
     if ($(document.body).hasClass('body-review')) {
-      console.log('thisisareview');
       
       var reviewTitlePosY = $('.stage__text__title').offset().top;
       var outine = $('.outine');
@@ -20,12 +19,10 @@ $(document).ready(function() {
     }
     
     else if ($(document.body).hasClass('body-index')) {
-      console.log('thisistheindex');
       var postHeroTitlePosY = $('.stage').offset().top;
       var brandLogo = $('.row.nav');
       var brandBackground = $('.stage-nav');
       
-      console.log(postHeroTitlePosY)
       
       if ($(window).scrollTop() > postHeroTitlePosY){
         brandBackground.removeClass('transparent');

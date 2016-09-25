@@ -20,8 +20,7 @@ console.log(__dirname + '/public')
 app.use(function (req, res, next) {
   var url = req.url;
   var ending = url.substring(url.length - 5, url.length);
-  console.log(url)
-  if (ending === '.html' && url != '/google92ffbcadb4e54db4.html') {
+  if (ending === '.html') {
     url = url.replace(ending, '');
     return res.redirect(url);
   }
@@ -48,7 +47,23 @@ app.get('/contributors/:slug', function(req, res) {
 
 app.get('/about', function(req, res) {
    res.render('about');
-})
+});
+
+//app.get('/search', function(req, res) {
+//  res.json([{
+//      title: "Dance 1",
+//      url: "/dance-one",
+//      contributor: "Grace", 
+//    },{
+//      title: "Dance 2",
+//      url: "/dance-two",
+//      contributor: "Grace", 
+//    },{
+//      title: "Dance 3",
+//      url: "/dance-three",
+//      contributor: "Grace", 
+//    }]);
+//});
 
 
 
