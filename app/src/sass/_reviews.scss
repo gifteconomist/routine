@@ -235,6 +235,8 @@
           width: 95%;
         }
         
+        
+        
         img {
           width: 100%;
           height: auto;
@@ -386,6 +388,13 @@
       }
     }
     
+  }
+  
+  .stage__text__image.two {   
+    img {
+      width: 50%;
+      display: inline-block;
+    }
   }
   
 //  .footer {
