@@ -313,6 +313,19 @@
 //    font-style: italic;
   }
   
+  .footnote {
+    font-family: arial;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  sup {
+    line-height: 1;
+    font-size: 14px;
+    font-family: Arial;
+    color: $primary-color;
+  }
+  
   .related-content {
     box-sizing: border-box;
     padding: 60px 45px 30px;
