@@ -598,17 +598,17 @@ body {
       position: fixed;
        width: 100%;
     &-image {
-      background-image: url(https://assets.routinemagazine.com/img/Monson-hero.jpg);
+      background-image: url(https://assets.routinemagazine.com/img/Monson-hero-min.jpg);
       background-color: $black;
       background-size: 100% auto;
       background-repeat: no-repeat;
       z-index: 0;
       width: 100%;
       position: absolute;
-      top: -240px;
+      top: -200px;
       bottom: 0;
       @media(max-width: 1200px) {
-        top:-200px;
+        top:-160px;
       }
       @media(max-width: 1100px) {
         top:-100px;
@@ -633,6 +633,7 @@ body {
             font-family: tiempos-reg;
             margin: 0;
             font-size: 42px;
+            text-shadow: 1.5px 2px black;
           }
           h1 {
             font-weight: 100;
