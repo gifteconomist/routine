@@ -598,14 +598,21 @@ body {
       position: fixed;
        width: 100%;
     &-image {
-      background-image: url(https://assets.routinemagazine.com/img/monumental-hero-min.jpg);
+      background-image: url(https://assets.routinemagazine.com/img/Monson-hero.jpg);
+      background-color: $black;
       background-size: 100% auto;
       background-repeat: no-repeat;
       z-index: 0;
       width: 100%;
       position: absolute;
-      top: -120px;
+      top: -240px;
       bottom: 0;
+      @media(max-width: 1200px) {
+        top:-200px;
+      }
+      @media(max-width: 1100px) {
+        top:-100px;
+      }
     }
     &-text {
       position: relative;
@@ -650,7 +657,11 @@ body {
   position: relative;
   background: white;
   margin-top: 600px;
-  
+  @media(min-width: 1500px) {
+    .hero-banner-image {
+      top: -400px; 
+    }
+  }
   @media (max-width: 1000px) {
     
     & {
