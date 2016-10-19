@@ -51,5 +51,70 @@
       border-top: 1px solid #f4f5f6;
       margin: 20px 100px;
     }
+    
+    &__item {
+      h3 {
+      margin: 0;
+      font-family: labmono;
+      color: #666;
+      font-size: 13px;
+      font-weight: 100;
+      padding-top: 2px;
+      
+      span {
+        color: $primary-color;
+        font-style: normal;
+      }
+    }
+      
+       h2 {
+        font-size: 10px;
+        font-family: Arial;
+        color: #666;
+        text-transform: uppercase;
+         
+        span {
+          font-family: Ceremony;
+          color: $primary-color;
+          font-size: 5px;
+          top: 0;
+          padding-bottom: 2px;
+          font-style: normal;
+        }
+        
+        a {
+          border-bottom: 1px solid #999;
+          padding-bottom: 1px;
+          color: #666;
+          &:hover {
+            color: $primary-color;
+            border-bottom: 1px solid $primary-color;
+          }
+        }
+      }
+    
+    h1 {
+      font-weight: 100;
+      font-size:24px;
+      white-space: normal;
+      margin: 0;
+      padding-top: 0;
+      color: $black;
+      font-family: tiempos-reg;
+      
+      @media (max-width: 400px) {
+        font-size: 20px;
+      }
+      span {
+        white-space: pre;
+        font-weight: 100;
+        font-style: italic;
+      }
+
+      &:hover {
+        color: $primary-color !important;
+      }
+    }
+    }
   }
 }
