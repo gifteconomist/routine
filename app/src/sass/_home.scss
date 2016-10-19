@@ -186,7 +186,7 @@ body {
     }
     
     .article-images:hover + .stage__item__text {
-      h2 {
+      h1 {
         color: $primary-color;
       }
     }
@@ -196,7 +196,7 @@ body {
       padding-top: 13px;
       white-space: normal;
       
-      h4 {
+      h2 {
         font-size: 10px;
         font-family: Arial;
         color: #666;
@@ -227,7 +227,7 @@ body {
       }
     }
     
-    h6 {
+    h4 {
       text-align: right;
       font-family: labmono;
       font-size: 14px;
@@ -248,7 +248,7 @@ body {
       }
     }
     
-    h5 {
+    h3 {
       margin: 0;
       font-family: labmono;
       color: #666;
@@ -262,7 +262,7 @@ body {
       }
     }
     
-    h2 {
+    h1 {
       font-weight: 100;
       font-size:24px;
       white-space: normal;
@@ -598,7 +598,7 @@ body {
       position: fixed;
        width: 100%;
     &-image {
-      background-image: url(https://assets.routinemagazine.com/img/Monson-hero-min.jpg);
+      background-image: url(https://assets.routinemagazine.com/img/hassabi-hero-min.jpg);
       background-color: $black;
       background-size: 100% auto;
       background-repeat: no-repeat;
@@ -628,7 +628,7 @@ body {
           padding: 200px 0 0 0;
           height: 100%;
           text-align: center;
-          h1, h3, h6 {
+          h1, h2 {
             color: red;
             font-family: tiempos-reg;
             margin: 0;
@@ -643,10 +643,12 @@ body {
             font-size: 22px;
             padding: 10px 5px;
           }
-          h6 {
+          h2 {
             font-family: arial;
             font-size: 20px;
             padding-top: 15px;
+            color: $primary-color;
+            margin: 0;
           }
         }
       }
@@ -683,13 +685,13 @@ body {
       top: -50px; 
       background-size: cover;
     }
-    h1 {
+    .hero-banner h1 {
       font-size: 30px;
     }
-    h3 {
+    .hero-banner h3 {
       font-size: 18px;
     }
-    h6 {
+    .hero-banner h2 {
       font-size: 15px;  
     }
     .hero-banner-text-table-cell {
