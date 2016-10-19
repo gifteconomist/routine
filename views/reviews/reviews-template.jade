@@ -3,9 +3,10 @@ html
   head
     meta(charset="UTF-8")
     meta(name='viewport' content='width=device-width,initial-scale=1')
-    title Routine Magazine | #{title}
-    block socialMeta
+    title #{title} | Routine Magazine
+    meta(name="description" content="#{indexSubtitle}: A review of #{titleMeta} by #{contributor.name}")
     link(rel='stylesheet', href='../css/styles.css')
+    block socialMeta
   body(class="body-review")
     div(class="row nav")
       .brand__items
@@ -13,7 +14,7 @@ html
           a(href="/") R
           a(href="/" class="outine") outine
         .nav-title= title
-      .nav__items 
+      nav(class="nav__items")
         a(href="/about") about 
         a(href="/reviews") reviews
     .stage

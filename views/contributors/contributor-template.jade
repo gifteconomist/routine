@@ -3,7 +3,7 @@ html
   head
     meta(charset="UTF-8")
     meta(name='viewport' content='width=device-width,initial-scale=1')
-    block title
+    title #{name} | Routine Magazine
     meta(name="google-site-verification" content="spK5BOUdQKtQM21L3cMYxQvEv44c2YQikpAwXCWiTO0")
     link(rel='stylesheet', href='../css/styles.css')
   body(class="body-contributor")
@@ -11,19 +11,19 @@ html
     .stage
       h1 #{name}
       p!= fullBio
-      h3 Articles by #{name}
+      h2 Articles by #{name}
       hr(class="large")
       each article in articles
-        .stage__item
+        section(class="stage__item")
           a(href="/reviews/#{article.name}" class="row article-images")
             img(src="https://assets.routinemagazine.com/img/load.png" data-src='https://assets.routinemagazine.com/img/#{article.leadImage}' class="lazyload first")
             img(src="https://assets.routinemagazine.com/img/load.png" data-src='https://assets.routinemagazine.com/img/#{article.secondImage}' class="lazyload middle")
             img(src="https://assets.routinemagazine.com/img/load.png" data-src='https://assets.routinemagazine.com/img/#{article.thirdImage}' class="lazyload last")
           .stage__item__text
             a(href="/reviews/#{article.name}")
-              h2!= article.indexTitle
-            h5= article.indexSubtitle
-            h4 #{article.type} #[span &nbsp; &#42; &nbsp;] #[a(href="/contributors/#{slug}") #{name}] #[span &nbsp; &#42; &nbsp;] #{article.date}
+              h1!= article.indexTitle
+            h3= article.indexSubtitle
+            h2 #{article.type} #[span &nbsp; &#42; &nbsp;] #[a(href="/contributors/#{slug}") #{name}] #[span &nbsp; &#42; &nbsp;] #{article.date}
     include ../includes/footer.jade
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
     script(type='text/javascript', src='../js/jquery.unveil.js') 

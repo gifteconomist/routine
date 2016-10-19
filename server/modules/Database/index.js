@@ -26,6 +26,7 @@ var Articles = database.define('articles', {
   subtitle:Sequelize.STRING,
   indexTitle: Sequelize.STRING,
   indexSubtitle: Sequelize.STRING,
+  titleMeta: Sequelize.STRING,
   date: Sequelize.DATE,
   contributorId: Sequelize.STRING,
   leadImage: Sequelize.STRING,
