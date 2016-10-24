@@ -9,7 +9,7 @@ module.exports = {
     
     var query = {
       order: [['date', 'DESC']], 
-      limit: 10,
+      limit: 15,
       include: [{
         model: database.contributor
       }],
