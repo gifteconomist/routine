@@ -92,7 +92,7 @@
         margin-left: 50px;
         @media (max-width: 550px) {
           margin-left: 30px;
-          width: calc(100% - 60px);
+          width: calc(100% - 50px);
         }
         @media (max-width: 414px) {
           margin-left: 15px;
@@ -115,16 +115,17 @@
     &__text {
       
       & {
-        width: 60vw;
-        padding: 20px 0 0 80px;
+        width: 700px;
+        padding: 20px 0 0 0;
         font-weight: 100;
+        margin: 0 auto;
         color: #3c3c3c;
         font-size: 18px;
         line-height: 1.618em; 
         
-        @media (max-width: $mobile-break) {
-          padding-left: 20px;
-          width: 91%;
+        @media (max-width: 800px) {
+          padding-left: 0;
+          width: 100%;
           font-size: 16px;
         }
         
@@ -171,7 +172,6 @@
           font-size: 45px;
           font-weight: 100 !important;
           line-height: 1.1;
-          width: 80vw;
           
           @media (max-width: $tablet-break) {
             width: auto;
