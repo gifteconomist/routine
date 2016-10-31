@@ -25,6 +25,7 @@ module.exports = {
         tempArticle.date = moment(tempArticle.date).format('MMMM D YYYY');
         articlesData.push(tempArticle);
       });
+      
 
       var template = 'index';
       res.render(template, {articles: articlesData});

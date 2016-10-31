@@ -45,11 +45,6 @@ var Contributor = database.define('contributors', {
   website: Sequelize.STRING,
   headshot: Sequelize.STRING,
   slug: Sequelize.STRING,
-//  reviews: {
-//    type: 'hasMany',
-//    model: 'Article',
-//    foreignKey: 'contributorId'
-//  },
 });
 
 Articles.belongsTo(Contributor, {foreignKey : 'contributorId'});

@@ -162,6 +162,10 @@
       
       &__title {
         padding: 20px 0;
+        margin: 0 -60px;
+        @media (max-width: 920px) {
+          margin: 0;
+        }
         @media (max-width: $mobile-break) {
           padding: 0;
         }
@@ -253,7 +257,10 @@
         }
         
         &--main {
-          margin: 20px 0;
+          margin: 20px -60px 40px;
+          @media (max-width: 920px) {
+            margin: 20px 0;
+          }
           
           img {
             width: 100%;
