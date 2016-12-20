@@ -8,8 +8,8 @@ module.exports = {
     
     var query = {
       order: [['date', 'DESC']], 
-      limit: 8,
-      offset: 1,
+      limit: 9,
+      offset: 0,
       include: [{
         model: database.contributor
       }], 
