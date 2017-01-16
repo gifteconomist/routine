@@ -10,3 +10,5 @@ fonts/
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
 example.js
+.env
+.ebignore
