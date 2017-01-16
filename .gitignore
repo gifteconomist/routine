@@ -1,4 +1,5 @@
 node_modules/
+npm-debug.log
 images/
 img/
 fonts/
@@ -12,3 +13,4 @@ fonts/
 example.js
 .env
 .ebignore
+.ebextensions
