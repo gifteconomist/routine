@@ -14,7 +14,7 @@ html
     meta(name="twitter:description" content="#{indexSubtitle}")
     meta(name="twitter:card" content="summary")
   body(class="body-review")
-    div(class="row nav")
+    nav(class="row nav")
       .brand__items
         .brand-logo
           a(href="/") R
@@ -23,8 +23,8 @@ html
       nav(class="nav__items")
         a(href="/about") about 
         a(href="/reviews") reviews
-    .stage
-      .stage__text
+    main.stage
+      article.stage__text
         .stage__text__title
           h1!= title
           p!= subtitle
@@ -33,7 +33,7 @@ html
           block stageImageMain
         block stageText
         p(class="author-blurb") #[b #[a(href="/contributors/#{contributor.slug}") #{contributor.name}]] #{contributor.bio}
-      .related-content 
+      section.related-content 
         h4 More Pieces
         .row
           each relatedArticle in relatedContent
