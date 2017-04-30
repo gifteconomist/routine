@@ -32,9 +32,6 @@
       }
     }
     a {
-//      padding: 0 100px;
-//      text-align: center;
-//      width: 100%;
       color: $primary-color;
       text-decoration: none;
     }
@@ -65,13 +62,13 @@
 //      font-size: 2rem;
 //      margin: 0;
 //    }
-    
-//    p #[span ROUTINE] is an online space for writing on dance and performance. Routine's primary initiative is to promote documentation and criticism that supports the creation, practice and education of dance.p Get beautiful emails about upcoming performances and new Routine content. 
-    
+
+//    p #[span ROUTINE] is an online space for writing on dance and performance. Routine's primary initiative is to promote documentation and criticism that supports the creation, practice and education of dance.p Get beautiful emails about upcoming performances and new Routine content.
+
     p {
       margin: 0;
     }
-    
+
     input.email {
       -webkit-appearance: none;
       font-family: labmono;
@@ -93,11 +90,11 @@
           color: white;
         }
       }
-      
+
       &::placeholder {
         color: $primary-color;
       }
-      
+
 //      @media (max-width: $mobile-break) {
 //        margin: 0 0 15px 0;
 //        width: 100%;
@@ -105,7 +102,7 @@
 //      }
 
     }
-    
+
     input.button {
       -webkit-appearance: none;
       border-radius: 0;
